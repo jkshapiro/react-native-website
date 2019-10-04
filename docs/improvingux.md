@@ -45,7 +45,7 @@ Android API 21+ uses the material design ripple to provide user with feedback wh
 
 ## Screen orientation lock
 
-Multiple screen orientations should work fine by default unless you're using `Dimensions` API and don't handle orientation changes. If you don't want to support multiple screen orientations, you can lock the screen orientation to either portrait or landscape.
+Multiple screen orientations should work fine by default unless you're using `Dimensions` API and don't handle orientation changes. If a specific screen orientation is essential, you can lock the screen orientation to either portrait or landscape. See the [WCAG 2.1 page on screen orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html) for more information regarding the impact on accessibility of locking the screen orientation.
 
 On iOS, in the General tab and Deployment Info section of Xcode enable the Device Orientation you want to support (ensure you have selected iPhone from the Devices menu when making the changes). For Android, open the AndroidManifest.xml file and within the activity element add `'android:screenOrientation="portrait"'` to lock to portrait or `'android:screenOrientation="landscape"'` to lock to landscape.
 
